@@ -1,1 +1,1 @@
-This repository is for Course project web application project
+This repository is for ProjectListweb app project
