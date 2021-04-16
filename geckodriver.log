@@ -591,3 +591,279 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1617725344482	Marionette	WARN	TLS certificate errors will be ignored for this session
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617727013525	Marionette	INFO	Stopped listening on port 45083
+1617727015423	Marionette	INFO	Stopped listening on port 36695
+1617727626148	geckodriver	INFO	Listening on 127.0.0.1:60373
+1617727626161	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilebtEn2A"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617727633863	Marionette	INFO	Listening on port 36619
+1617727633936	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1617727648674	Marionette	INFO	Stopped listening on port 36619
+1617727790798	geckodriver	INFO	Listening on 127.0.0.1:48003
+1617727790808	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile9d1lrH"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+1617727798332	Marionette	INFO	Listening on port 45719
+1617727798483	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617727836660	Marionette	INFO	Stopped listening on port 45719
+1617776185734	geckodriver	INFO	Listening on 127.0.0.1:50547
+1617776186579	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileTtVsaJ"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617776208013	Marionette	INFO	Listening on port 42349
+1617776208318	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617776252110	geckodriver	INFO	Listening on 127.0.0.1:40995
+1617776252142	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHP4k2W"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1617776269705	Marionette	INFO	Listening on port 34311
+1617776269781	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/fxmonitor-breaches Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/partitioning-exempt-urls Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1617776315117	Marionette	INFO	Stopped listening on port 42349
+console.error: services.settings: 
+  main/message-groups Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1617776319384	Marionette	INFO	Stopped listening on port 34311
+1617776427270	geckodriver	INFO	Listening on 127.0.0.1:41909
+1617776427335	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilem5AbHJ"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617776441320	Marionette	INFO	Listening on port 38839
+1617776441471	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617776556077	Marionette	INFO	Stopped listening on port 38839
+1617776810192	geckodriver	INFO	Listening on 127.0.0.1:34047
+1617776810218	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilehmwM9c"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617776825896	Marionette	INFO	Listening on port 38035
+1617776826201	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617777054373	geckodriver	INFO	Listening on 127.0.0.1:59295
+1617777055386	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZoB0pW"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617777078394	Marionette	INFO	Stopped listening on port 38035
+1617777082257	Marionette	INFO	Listening on port 37153
+1617777082549	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617777632510	geckodriver	INFO	Listening on 127.0.0.1:41745
+1617777633284	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileUCA9xI"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617777661519	Marionette	INFO	Listening on port 43911
+1617777662737	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617778283322	geckodriver	INFO	Listening on 127.0.0.1:41741
+1617778284173	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileYlLn29"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+1617778318212	Marionette	INFO	Listening on port 34673
+1617778318981	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617778321640	Marionette	INFO	Stopped listening on port 43911
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617782507126	Marionette	INFO	Stopped listening on port 34673
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A0070,name=PContent::Msg_SuspendInputEventQueue) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A006E,name=PContent::Msg_FlushInputEventQueue) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A006F,name=PContent::Msg_ResumeInputEventQueue) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A0055,name=PContent::Msg_Shutdown) Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+1617782577828	Marionette	INFO	Stopped listening on port 37153
+1617782602241	geckodriver	INFO	Listening on 127.0.0.1:51763
+1617782603157	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileuxUf4B"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1617782624738	Marionette	INFO	Listening on port 39647
+1617782625061	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617785242112	geckodriver	INFO	Listening on 127.0.0.1:37437
+1617785243039	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileVaPyfc"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617785263518	Marionette	INFO	Listening on port 44201
+1617785263937	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617785327086	Marionette	INFO	Stopped listening on port 44201
+1617785335416	Marionette	INFO	Stopped listening on port 39647
+1617785343579	geckodriver	INFO	Listening on 127.0.0.1:59795
+1617785343613	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoUd8DP"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617785362085	Marionette	INFO	Listening on port 44281
+1617785362710	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617785457595	geckodriver	INFO	Listening on 127.0.0.1:43005
+1617785458606	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileozSISf"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617785475964	Marionette	INFO	Listening on port 43579
+1617785476288	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617785485747	Marionette	INFO	Stopped listening on port 43579
+1617785503841	Marionette	INFO	Stopped listening on port 44281
+1617786217848	geckodriver	INFO	Listening on 127.0.0.1:48941
+1617786217861	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileo1jWWe"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617786230295	Marionette	INFO	Listening on port 34519
+1617786230470	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617786285104	geckodriver	INFO	Listening on 127.0.0.1:50147
+1617786285115	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileEe67IB"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617786296260	Marionette	INFO	Listening on port 33227
+1617786296343	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617786304418	Marionette	INFO	Stopped listening on port 33227
+1617786334965	geckodriver	INFO	Listening on 127.0.0.1:52069
+1617786334991	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqKJ48s"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617786345810	Marionette	INFO	Listening on port 45607
+1617786346124	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617786688356	geckodriver	INFO	Listening on 127.0.0.1:47675
+1617786688388	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDUoQ2T"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617786709459	Marionette	INFO	Listening on port 43915
+1617786710087	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617786799018	Marionette	INFO	Stopped listening on port 43915
+1617787098054	geckodriver	INFO	Listening on 127.0.0.1:44957
+1617787099015	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqkt18z"
+1617787106520	Marionette	INFO	Stopped listening on port 45607
+1617787107983	Marionette	INFO	Stopped listening on port 34519
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617787121465	Marionette	INFO	Listening on port 43313
+1617787121790	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617787146586	Marionette	INFO	Stopped listening on port 43313
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617787212525	geckodriver	INFO	Listening on 127.0.0.1:39257
+1617787212537	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSy6NQL"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617787223139	Marionette	INFO	Listening on port 46509
+1617787223499	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617787385407	geckodriver	INFO	Listening on 127.0.0.1:55959
+1617787386319	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileB2P7hV"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617787408531	Marionette	INFO	Listening on port 34773
+1617787408644	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617787490346	Marionette	INFO	Stopped listening on port 34773
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617787706029	geckodriver	INFO	Listening on 127.0.0.1:57941
+1617787707037	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileBJNwsQ"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617787717993	Marionette	INFO	Listening on port 34843
+1617787718105	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617787817308	Marionette	INFO	Stopped listening on port 46509
+1617787822002	Marionette	INFO	Stopped listening on port 34843
+1617787963543	geckodriver	INFO	Listening on 127.0.0.1:53137
+1617787963556	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileX2FLH0"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617787979168	Marionette	INFO	Listening on port 42341
+1617787979361	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617788331361	Marionette	INFO	Stopped listening on port 42341
+1617790973324	geckodriver	INFO	Listening on 127.0.0.1:59735
+1617790974201	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNhYtxM"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617790990342	Marionette	INFO	Listening on port 40299
+1617790990611	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617791588982	geckodriver	INFO	Listening on 127.0.0.1:41835
+1617791589031	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileIHKN2E"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617791603543	Marionette	INFO	Listening on port 37301
+1617791603790	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617791635538	Marionette	INFO	Stopped listening on port 40299
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617792120743	geckodriver	INFO	Listening on 127.0.0.1:36419
+1617792120779	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile5x061m"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617792129924	Marionette	INFO	Listening on port 33777
+1617792130071	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617792157308	Marionette	INFO	Stopped listening on port 33777
+1617792157494	Marionette	INFO	Stopped listening on port 37301
+1617792173717	geckodriver	INFO	Listening on 127.0.0.1:57935
+1617792173727	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileeEVHdI"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617792181592	Marionette	INFO	Listening on port 43497
+1617792181702	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617792288821	geckodriver	INFO	Listening on 127.0.0.1:48107
+1617792288831	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2xUrQj"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617792297044	Marionette	INFO	Listening on port 35601
+1617792297139	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1617792317097	Marionette	INFO	Stopped listening on port 43497
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+1617792569310	Marionette	INFO	Stopped listening on port 35601
+1617857034333	geckodriver	INFO	Listening on 127.0.0.1:54827
+1617857035194	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilelAJbW1"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617857044340	Marionette	INFO	Listening on port 43333
+1617857046078	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+console.error: services.settings: 
+  main/partitioning-exempt-urls Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/message-groups Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1617857056854	Marionette	INFO	Stopped listening on port 43333
+1618228105200	geckodriver	INFO	Listening on 127.0.0.1:32949
+1618228106045	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileweNeRq"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618228129071	Marionette	INFO	Listening on port 37599
+1618228129385	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+console.warn: services.settings: main/url-classifier-skip-urls sync interrupted by shutdown
+console.warn: services.settings: blocklists/gfx sync interrupted by shutdown
+console.warn: services.settings: main/hijack-blocklists sync interrupted by shutdown
+1618228481024	Marionette	INFO	Stopped listening on port 37599
