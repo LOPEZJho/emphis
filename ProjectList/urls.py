@@ -27,5 +27,5 @@ from JMList import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home_page),
+    url(r'^$', views.homepage),
 ]

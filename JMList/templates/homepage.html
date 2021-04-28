@@ -1,17 +1,71 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Employees Valid ID Number</title>
+	
+</head>
+
 <body>
-
-<title>Student List</title>
-<h2>Student List</h2>
-
-<form>
-  <label for="fname">Student name:</label><br>
-  <input type="text" id="fname" name="fname" ><br>
-  <label for="lname">Course mo?:</label><br>
-  <input type="text" id="lname" name="lname" >
-  <input type="submit" value="Submit">
-</form>
-
+	<h1 style="color: blue; font-size: 30px">
+	Employees Valid ID Number
+	</h1>
+	<form method="POST">
+		<label>Name of Employee:</label>
+		<input
+		type="text"
+		id="newFirst"
+		name="newFirst"
+		size="25"
+		placeholder="First name"
+		/>
+		<input
+		type="text"
+		id="newLast"
+		name="newLast"
+		size="25"
+		placeholder="Last name"
+		/><br/><br/>
+		<label>Valid ID of Employee:</label>
+		<input
+		type="text"
+		id="validEntry"
+		name="validEntry"
+		size="20"
+		placeholder="Name of ID"
+		/>
+		<label>ID Number:</label>
+		<input
+		type="text"
+		id="validNumber"		
+		name="validNumber"
+		size="20"
+		placeholder="ID Number"
+		/>
+		<label>Date Issued:</label>
+		<input
+		type="text"
+		id="validDate"
+		name="validDate"
+		size="20"
+		placeholder="mm/dd/yyyy"
+		/>
+		<input
+		type="submit"
+		id="btnConfirm"
+		name="btnConfirm"
+		size="20"
+		style="color: blue; background-color: grey"
+		value="Confirm"
+		/>
+		{% csrf_token %}
+	</form>
+	<table id="listTable">
+		<tr>
+			<td>1: {{validEntry}}</td>
+			<td>{{validNumber}}</td>
+			<td>on</td>
+			<td>{{validDate}}</td>
+		</tr>
+	</table>
 </body>
 </html>
