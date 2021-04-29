@@ -1,7 +1,7 @@
 from django.test import TestCase
-from django.http import HttpResponse
-from django.template.loader import render_to_string
-
+#from django.http import HttpResponse
+#from django.template.loader import render_to_string
+from JMList.models import Item
 
 class HomePageTest(TestCase):
 
@@ -10,10 +10,25 @@ class HomePageTest(TestCase):
 		self.assertTemplateUsed(response, 'homepage.html')
 
 	def test_save_POST_request(self):
-		response = self.client.post('/', data={'newFirst': 'A New entry'})
-		self.assertIn('A New entry', response.content.decode())
+		response = self.client.post('/', data={'newFirst': 'validEntry'})
+		self.assertIn('validEntry', response.content.decode())
 		self.assertTemplateUsed(response,'homepage.html')
 
+class ORMTest(TestCase):
+	def test_saving_retrieving_list(self):
+		txtItem1 = Item()
+		txtItem1.text = 'Item one'
+		txtItem1.save()
+		txtItem2 = Item()
+		txtItem2.text = 'Item two'
+		txtItem2.save()
+		savedItems = Item.objects.all()
+		self.assertEqual(savedItems.count(),2)
+		savedItem1 = savedItems[0]
+		savedItem2 = savedItems[1]
+		self.assertEqual(savedItem1.text,'Item one')
+		self.assertEqual(savedItem2.text,'Item two')
+		
 
 
 	'''def test_only_saves_items_if_necessary(self):

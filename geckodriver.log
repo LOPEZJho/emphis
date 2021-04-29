@@ -2460,3 +2460,51 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 JavaScript error: resource://gre/modules/CrashManager.jsm, line 833: NotAllowedError: Shutting down and refusing additional I/O tasks
 1619638374035	Marionette	INFO	Stopped listening on port 36283
 1619638374467	Marionette	INFO	Stopped listening on port 44299
+1619639326314	geckodriver	INFO	Listening on 127.0.0.1:48361
+1619639326324	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileURiXmO"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+1619639328577	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619639334674	Marionette	INFO	Listening on port 46379
+1619639334803	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619639335702	geckodriver	INFO	Listening on 127.0.0.1:43403
+1619639336711	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileijqqeK"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+1619639340155	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619639347011	Marionette	INFO	Listening on port 43461
+1619639347164	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619639434134	geckodriver	INFO	Listening on 127.0.0.1:43535
+1619639434221	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKzfWwE"
+1619639436252	Marionette	INFO	Stopped listening on port 46379
+1619639436552	Marionette	INFO	Stopped listening on port 43461
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+1619639439736	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619639446900	Marionette	INFO	Listening on port 46553
+1619639447444	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619639448191	geckodriver	INFO	Listening on 127.0.0.1:49705
+1619639449198	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileasS19u"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+1619639452652	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619639459693	Marionette	INFO	Listening on port 36639
+1619639460241	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619639562889	Marionette	INFO	Stopped listening on port 36639
+1619639573424	Marionette	INFO	Stopped listening on port 46553
+1619655376355	geckodriver	INFO	Listening on 127.0.0.1:38483
+1619655377236	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileMF3z8q"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+1619655380946	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619655389116	Marionette	INFO	Listening on port 44213
+1619655389903	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619655390993	geckodriver	INFO	Listening on 127.0.0.1:48001
+1619655391998	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJ5ILqu"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+1619655396563	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619655404394	Marionette	INFO	Listening on port 42513
+1619655404885	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619655820368	Marionette	INFO	Stopped listening on port 44213
+1619655822035	Marionette	INFO	Stopped listening on port 42513
