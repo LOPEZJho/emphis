@@ -60,11 +60,10 @@
 		{% csrf_token %}
 	</form>
 	<table id="listTable">
+		{%for item in validEntry%}
 		<tr>
-			<td>1: {{validEntry}}</td>
-			<td>{{validNumber}}</td>
-			<td>on</td>
-			<td>{{validDate}}</td>
+			<td>{{ forloop.counter }}:{{ item.text }}</td>
+		{%endfor%}
 		</tr>
 	</table>
 </body>

@@ -4,9 +4,10 @@ from JMList.models import Item
 
 def homepage(request):
 	if request.method == 'POST':
-		Item.objects.create(text=request.POST['newFirst'])
+		Item.objects.create(text=request.POST['validEntry'])
 		return redirect('/')
-	return render(request,'homepage.html')
+	items = Item.objects.all()
+	return render(request,'homepage.html',{'validEntry':items})
 
 
 #def homepage(request):

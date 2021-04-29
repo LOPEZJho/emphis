@@ -12,16 +12,26 @@ class HomePageTest(TestCase):
 	def test_only_saves_items_if_necessary(self):
 		self.client.get('/')
 		self.assertEqual(Item.objects.count(),0)
-		
-	def test_save_POST_request(self):
-		response = self.client.post('/', data={'newFirst': ''})
 
+	def test_save_POST_request(self):
+		response = self.client.post('/', data={'validEntry': ''})
 		self.assertEqual(Item.objects.count(),1)
 		newItem = Item.objects.first()
 		self.assertEqual(newItem.text, '')
+		
+	def test_redirects_POST(self):
+		response = self.client.post('/', data={'validEntry':''})
 
 		self.assertEqual(response.status_code, 302)
 		self.assertEqual(response['location'],'/')
+
+	def test_template_display_list(self):
+		Item.objects.create(text='List item 1')
+		Item.objects.create(text='List item 2')
+		response = self.client.get('/')
+		self.assertIn('List item 1', response.content.decode())
+		self.assertIn('List item 2', response.content.decode())
+
 
 class ORMTest(TestCase):
 	def test_saving_retrieving_list(self):
@@ -37,24 +47,9 @@ class ORMTest(TestCase):
 		savedItem2 = savedItems[1]
 		self.assertEqual(savedItem1.text,'Item one')
 		self.assertEqual(savedItem2.text,'Item two')
-		
+	
 
-
-	'''def test_only_saves_items_if_necessary(self):
-		self.client.get('/')
-		self.assertEqual(Item.objects.count(), 0)
-
-	def test_save_POST_request(self):
-		reponse = self.client.post('/', data={'validEntry': 'frenzy'}) 
-		self.assertEqual(Item.objects.count(), 1)
-		newItem = Item.objects.first()
-		self.assertEqual(newItem.text, 'frenzy')
-
-	def test_redirects_POST(self):
-		reponse = self.client.post('/', data={'validEntry': 'frenzy'})
-		self.assertEqual(response.status_code, 302)
-		self.assertEqual(response['location'], '/')
-
+'''
 	def test_template_display_list(self):
 		Item.objects.create(text='List item 1')
 		Item.objects.create(text='List item 2')
