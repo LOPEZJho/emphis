@@ -11,9 +11,8 @@ class HomePageTest(TestCase):
 
 	def test_only_saves_items_if_necessary(self):
 		self.client.get('/')
-		self.assertEqual(Item.objects.count(),1)
-
-
+		self.assertEqual(Item.objects.count(),0)
+		
 	def test_save_POST_request(self):
 		response = self.client.post('/', data={'newFirst': ''})
 
@@ -21,8 +20,8 @@ class HomePageTest(TestCase):
 		newItem = Item.objects.first()
 		self.assertEqual(newItem.text, '')
 
-		self.assertIn('validEntry', response.content.decode())
-		self.assertTemplateUsed(response,'homepage.html')
+		self.assertEqual(response.status_code, 302)
+		self.assertEqual(response['location'],'/')
 
 class ORMTest(TestCase):
 	def test_saving_retrieving_list(self):
