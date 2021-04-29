@@ -9,8 +9,18 @@ class HomePageTest(TestCase):
 		response = self.client.get('/')
 		self.assertTemplateUsed(response, 'homepage.html')
 
+	def test_only_saves_items_if_necessary(self):
+		self.client.get('/')
+		self.assertEqual(Item.objects.count(),1)
+
+
 	def test_save_POST_request(self):
-		response = self.client.post('/', data={'newFirst': 'validEntry'})
+		response = self.client.post('/', data={'newFirst': ''})
+
+		self.assertEqual(Item.objects.count(),1)
+		newItem = Item.objects.first()
+		self.assertEqual(newItem.text, '')
+
 		self.assertIn('validEntry', response.content.decode())
 		self.assertTemplateUsed(response,'homepage.html')
 
