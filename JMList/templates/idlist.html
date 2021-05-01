@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employees Valid ID Number</title>
+    <meta charset="utf-8">
+</head>
+<link href="('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap')" rel="stylesheet">
+
+<body>
+	<h1 style="color: blue; font-size: 30px">
+	Employees Valid ID Number
+	</h1>
+	<form method="POST" action="/JMList/{{ list.id }}/add_item">
+		<label>Valid ID of Employee:</label>
+		<input
+		type="text"
+		id="validEntry"
+		name="validEntry"
+		size="15"
+		placeholder="Name of ID"
+		/>
+		<label>ID Number:</label>
+		<input
+		type="text"
+		id="validNumber"		
+		name="validNumber"
+		size="15"
+		placeholder="ID Number"
+		/>
+		<label>Date Issued:</label>
+		<input
+		type="text"
+		id="validDate"
+		name="validDate"
+		size="15"
+		placeholder="mm/dd/yyyy"
+		/>
+		<input
+		type="submit"
+		id="btnConfirm"
+		name="btnConfirm"
+		size="20"
+		style="color: blue; background-color: black"
+		value="Confirm"
+		/>
+		{% csrf_token %}
+	</form>
+	<table id="listTable" name="tr">
+		{% for item in list.item_set.all %} 
+       <! -- {{ forloop.counter }}:  -->
+        <td>{{ item.valID }}</td>
+        <td>{{ item.valNum }}</td>
+        <td>{{ item.date}}</td>
+		</tr>
+		{%endfor%}
+	</table>
+</body>
+</html>

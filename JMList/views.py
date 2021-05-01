@@ -1,13 +1,33 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from JMList.models import Item
+from JMList.models import Item, List
 
 def homepage(request):
+	items = Item.objects.all()
+	return render(request, 'homepage.html',{'items' : items})
+
+def view_list(request, list_id):
+	list_ = List.objects.get(id=list_id)
+	return render(request, 'idlist.html', {'list':list_})
+
+def new_list(request):
+	list_ = List.objects.create()
+	Item.objects.create(text=request.POST['newFirst'],last=request.POST['newLast'],valID=request.POST['validEntry'],valNum=request.POST['validNumber'],date=request.POST['validDate'], list=list_)
+	return redirect(f'/JMList/{list_.id}/')
+
+def add_item(request, list_id):
+	list_ = List.objects.get(id=list_id)
+	Item.objects.create(valID=request.POST['validEntry'],valNum=request.POST['validNumber'],date=request.POST['validDate'],list=list_)
+	return redirect(f'/JMList/{list_.id}/')
+
+
+
+'''	
 	if request.method == 'POST':
 		Item.objects.create(text=request.POST['validEntry'])
 		return redirect('/')
 	items = Item.objects.all()
-	return render(request,'homepage.html',{'validEntry':items})
+	return render(request,'homepage.html',{'items':items})'''
 
 
 #def homepage(request):
