@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Employees Valid ID Number</title>
+<title>Employees Name</title>
     <meta charset="utf-8">
- 
+
+
     <style>
     	
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 html,body{
@@ -44,7 +45,7 @@ html,body{
   background: blue;
 }
 .wrapper form{
-  padding: 30px;
+  padding: 10px 30px 50px 30px;
 }
 .wrapper form .field{
   height: 50px;
@@ -84,17 +85,16 @@ form .field input:valid{
 form .field input:focus ~ label,
 form .field input:valid ~ label{
   top: 0%;
-  font-size: 15px;
+  font-size: 16px;
   color: #4158d0;
   background: #fff;
   transform: translateY(-50%);
-  padding: 15px;
 }
 
 
 
 form .field input[type="submit"]{
-  color: white;
+  color: grey;
   border: none;
   padding-left: 0;
   margin-top: -10px;
@@ -109,12 +109,13 @@ form .field input[type="submit"]:active{
 }
 
 
-    </style>
+    </style> 
+
 </head>
 
 <body>
 	<h1 style="color: blue; font-size: 30px">
-	Employees Valid ID Number
+	Employees Name
 	</h1>
 	<form method="POST" action="/JMList/new">
 		<label>Name of Employee:</label>
@@ -131,37 +132,13 @@ form .field input[type="submit"]:active{
 		name="newLast"
 		size="20"
 		placeholder="Last name"
-		/><br/><br/>
-		<label>Valid ID of Employee:</label>
-		<input
-		type="text"
-		id="validEntry"
-		name="validEntry"
-		size="15"
-		placeholder="Name of ID"
-		/>
-		<label>ID Number:</label>
-		<input
-		type="text"
-		id="validNumber"		
-		name="validNumber"
-		size="15"
-		placeholder="ID Number"
-		/>
-		<label>Date Issued:</label>
-		<input
-		type="text"
-		id="validDate"
-		name="validDate"
-		size="15"
-		placeholder="mm/dd/yyyy"
 		/>
 		<input
 		type="submit"
 		id="btnConfirm"
 		name="btnConfirm"
 		size="20"
-		style="color: blue; background-color: black"
+		style="background-color: lightblue"
 		value="Confirm"
 		/>
 		{% csrf_token %}
@@ -169,8 +146,8 @@ form .field input[type="submit"]:active{
 	{%for item in items%}
 	<table id="listTable" name="tr">
 		<tr>
-			<td>{{ item.text }}</td>
-			<td>{{ item.last }}</td>
+		<! -- {{ forloop.counter }}:  -->
+			<td>{{ item.text }}</td><td>{{ item.last }}</td>
 		</tr>
 		{%endfor%}
 	</table>

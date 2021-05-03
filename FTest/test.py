@@ -36,9 +36,9 @@ class PageTest(LiveServerTestCase):
 	def test_browser_title(self):
 		#self.browser.get(self.live_server_url)
 		self.browser.get('http://localhost:8000/')
-		self.assertIn('Employees Valid ID Number',self.browser.title)
+		self.assertIn('Employees Name',self.browser.title)
 		header_Text = self.browser.find_element_by_tag_name('h1').text
-		self.assertIn('Employees Valid ID Number', header_Text)
+		self.assertIn('Employees Name', header_Text)
 		#inputbox = self.browser.find_element_by_id('validEntry')
 		#self.assertEqual(inputbox.get_attribute('placeholder'), 'Name of ID')
 		
@@ -54,6 +54,10 @@ class PageTest(LiveServerTestCase):
 		inputlast.click()
 		inputlast.send_keys('Lopez')
 		time.sleep(1)
+
+		btnConfirm = self.browser.find_element_by_id('btnConfirm')
+		btnConfirm.click()
+		time.sleep(2)
 
 		inputvalidID = self.browser.find_element_by_id('validEntry')
 		self.assertEqual(inputvalidID.get_attribute('placeholder'), 'Name of ID')

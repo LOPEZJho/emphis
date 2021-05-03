@@ -12,7 +12,7 @@ def view_list(request, list_id):
 
 def new_list(request):
 	list_ = List.objects.create()
-	Item.objects.create(text=request.POST['newFirst'],last=request.POST['newLast'],valID=request.POST['validEntry'],valNum=request.POST['validNumber'],date=request.POST['validDate'], list=list_)
+	Item.objects.create(text=request.POST['newFirst'],last=request.POST['newLast'],list=list_)
 	return redirect(f'/JMList/{list_.id}/')
 
 def add_item(request, list_id):
