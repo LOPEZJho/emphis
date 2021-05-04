@@ -3512,3 +3512,19 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1620049417772	Marionette	INFO	Listening on port 33291
 1620049418010	Marionette	WARN	TLS certificate errors will be ignored for this session
 1620050859046	Marionette	INFO	Stopped listening on port 33291
+1620089728511	geckodriver	INFO	Listening on 127.0.0.1:48727
+1620089729366	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilej1BH1f"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+1620089734223	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620089750028	Marionette	INFO	Listening on port 40687
+1620089750245	Marionette	WARN	TLS certificate errors will be ignored for this session
+1620091312580	Marionette	INFO	Stopped listening on port 40687
+1620092545031	geckodriver	INFO	Listening on 127.0.0.1:48583
+1620092545860	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilezNWwDQ"
+[GFX1-]: More than 1 GPU from same vendor detected via PCI, cannot deduce device
+1620092549753	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620092560123	Marionette	INFO	Listening on port 46547
+1620092560425	Marionette	WARN	TLS certificate errors will be ignored for this session
+1620092601891	Marionette	INFO	Stopped listening on port 46547
