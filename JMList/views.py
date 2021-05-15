@@ -1,25 +1,61 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from JMList.models import Item, List
+from JMList.models import Employee, ValidID
 
 def homepage(request):
-	items = Item.objects.all()
-	return render(request, 'homepage.html',{'items' : items})
+	return render(request, 'homepage.html')
 
-def view_list(request, list_id):
-	list_ = List.objects.get(id=list_id)
-	return render(request, 'idlist.html', {'list':list_})
+def View_List(request, eID):
+	empID = Employee.objects.get(id=eID)
+	return render(request, 'idlist.html', {'EmpId':empId})
 
-def new_list(request):
-	list_ = List.objects.create()
-	Item.objects.create(text=request.POST['newFirst'],last=request.POST['newLast'],list=list_)
-	return redirect(f'/JMList/{list_.id}/')
+def New_List(request):
+	newEmp = Employee.objects.create(eName=request.POST['newEmployee'],eGender=request.POST['newGender'],eAddress=request.POST['empAddress'])
+	return redirect(f'/JMList/{newEmp.id}/')
 
-def add_item(request, list_id):
-	list_ = List.objects.get(id=list_id)
-	Item.objects.create(valID=request.POST['validEntry'],valNum=request.POST['validNumber'],date=request.POST['validDate'],list=list_)
-	return redirect(f'/JMList/{list_.id}/')
+def Add_Item(request, eID):
+	empID = Employee.objects.get(id=eID)
+	Item.objects.create(EmpId=empId, ValID=request.POST['validEntry'],ValNum=request.POST['validNumber'],ValDate=request.POST['validDate'])
+	return redirect(f'/JMList/{empId.id}/')
 
+def dataManipulation(request):
+	#Creating a new entry for entry
+	employee = Employee(Name="", Address ="", PhoneNumber="", EmailAddress="")
+	employee.save()
+
+	#Read all of the entries in employee
+	objects = Employee.objects.all()
+	result ='Printing all of the entries under Employee model : <br>'
+	for x in objects:
+		result += x.Name+"<br>"
+
+	#Read a specific entry in employee
+	ename = Employee.objects.get(id="")
+	result += 'Printing only one entry <br>'
+	result += ename.PhoneNumber
+
+	#Delete the entry
+	result += 'Deleting an entry <br>'
+	ename.delete()
+
+	#Update an information for employee
+	#employee = Employee(Name="", Address="", PhoneNumber="", EmailAddress="")
+	#employee.save()
+	#result += 'Updating information <br>'
+
+	employee = Employee.objects.get(name ='')
+	employee.PhoneNumber = ""
+	employee.save = ""
+	result = ""
+
+	#Filtering the data:
+	jm = ValidID.objects.filter(Name = "")
+	result += "Found : %s result <br>" %len(jm)
+
+	#Ordering results:
+	qs = Employee.objects.order_by("Address")
+	for x in jm:
+		result +=x.Name + x.Address + '<br>'
 
 
 '''	

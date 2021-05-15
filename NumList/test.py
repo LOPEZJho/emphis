@@ -11,14 +11,9 @@ class PageTest(LiveServerTestCase):
 	def setUp(self):
 		self.browser = webdriver.Firefox()
 
-	#def test_browser_title(self):
-		#self.browser.get('http://localhost:8000/')
-		#self.assertIn('Employees Valid ID Number',self.browser.title)
-
 	def wait_rows_in_list_table(self,row_text):
 		start_time = time.time()
 		while True:
-			#time.sleep(0.2)
 			try:
 				table = self.browser.find_element_by_id('listTable')
 				rows = table.find_elements_by_tag_name('tr')
@@ -28,21 +23,14 @@ class PageTest(LiveServerTestCase):
 				if time.set()-start_time >MAX_WAIT:
 					raise e
 					time.sleep(0.5)
-		'''table = self.browser.find_element_by_id('listTable')
-		rows = table.find_elements_by_tag_name('tr')
-		self.assertIn(row_text, [row.text for row in rows])'''
-
 
 	def test_browser_title(self):
-		#self.browser.get(self.live_server_url)
-		self.browser.get('http://localhost:8000/')
-		self.assertIn('Employees Name',self.browser.title)
+		self.browser.get(self.live_server_url)
+		#self.browser.get('http://localhost:8000/')
+		self.assertIn('Employees History',self.browser.title)
 		header_Text = self.browser.find_element_by_tag_name('h1').text
 		self.assertIn('Employees Name', header_Text)
-		#inputbox = self.browser.find_element_by_id('validEntry')
-		#self.assertEqual(inputbox.get_attribute('placeholder'), 'Name of ID')
 		
-		#time.sleep(.1)
 		inputtext = self.browser.find_element_by_id('newFirst')
 		self.assertEqual(inputtext.get_attribute('placeholder'), 'First name')
 		inputtext.click()
@@ -80,6 +68,11 @@ class PageTest(LiveServerTestCase):
 		btnConfirm = self.browser.find_element_by_id('btnConfirm')
 		btnConfirm.click()
 		time.sleep(2)
+
+		#def test_browser_title(self):
+		#self.browser.get('http://localhost:8000/')
+		#self.assertIn('Employees Valid ID Number',self.browser.title)
+
 		#self.wait_rows_in_list_table('1: TIN ID')
 		#time.sleep(2)
 		#this page should update and show two types of id on the list
@@ -110,11 +103,6 @@ class PageTest(LiveServerTestCase):
 		#rows = table.find_element_by_tag_name('tr')
 		#self.assertIn('1: TIN ID 123-456-000-789 on 08/27/2020', [row.text for row in rows])
 		#self.assertIn("1: Philhealth ID 12-334455007-8 on 09/13/2020", [row.text for row in rows])'''
-
-
-
-
-
 
 		'''inputbox2 = self.browser.find_element_by_id('validNumber')
 		self.assertEqual(inputbox2.get_attribute('placeholder'), 'ID Number')
