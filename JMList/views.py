@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from JMList.models import Employee, ValidID
+from JMList.models import Item, Employee
+
 
 def homepage(request):
 	return render(request, 'homepage.html')
@@ -39,19 +40,44 @@ def dataManipulation(request):
 	ename.delete()
 
 	#Update an information for employee
+	#employee = Employee(Name="", Address="", PhoneNumber="", EmailAddress="")
+	#employee.save()
+	#result += 'Updating information <br>'
+
 	employee = Employee.objects.get(name ='')
 	employee.PhoneNumber = ""
 	employee.save = ""
-	result = ""
+	res = ""
 
 	#Filtering the data:
-	jm = ValidID.objects.filter(Name = "")
-	result += "Found : %s result <br>" %len(jm)
+	jm = ValidID.objects.filtered(Name = "")
+	result += "Found : %s results <br>" % len (jm)
 
-	#Ordering results:
-	qs = Employee.objects.order_by("Address")
+	#Ordering results
+	jm = Employee.objects.ordered_by("Address")
 	for x in jm:
-		result +=x.Name + x.Address + '<br>'
+		result += x.Name + x.Address + '<br>'
+
+
+
+'''
+def homepage(request):
+	items = Item.objects.all()
+	return render(request, 'homepage.html',{'items' : items})
+
+def view_list(request, list_id):
+	list_ = List.objects.get(id=list_id)
+	return render(request, 'idlist.html', {'list':list_})
+
+def new_list(request):
+	list_ = List.objects.create()
+	Item.objects.create(text=request.POST['newFirst'],last=request.POST['newLast'],list=list_)
+	return redirect(f'/JMList/{list_.id}/')
+
+def add_item(request, list_id):
+	list_ = List.objects.get(id=list_id)
+	Item.objects.create(valID=request.POST['validEntry'],valNum=request.POST['validNumber'],date=request.POST['validDate'],list=list_)
+	return redirect(f'/JMList/{list_.id}/')'''
 
 
 '''	

@@ -4,7 +4,6 @@
 <title>Employees History</title>
     <meta charset="utf-8">
 
-
     <style>
     	
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -121,17 +120,17 @@ form .field input[type="submit"]:active{
 		<label>Name of Employee:</label>
 		<input
 		type="text"
-		id="newFirst"
-		name="newFirst"
+		id="newEmployee"
+		name="newEmployee"
 		size="20"
-		placeholder="First name"
+		placeholder="Full name"
 		/>
 		<input
 		type="text"
-		id="newLast"
-		name="newLast"
+		id="newAddress"
+		name="newAddress"
 		size="20"
-		placeholder="Last name"
+		placeholder="Address"
 		/>
 		<input
 		type="submit"
@@ -147,7 +146,7 @@ form .field input[type="submit"]:active{
 	<table id="listTable" name="tr">
 		<tr>
 		<! -- {{ forloop.counter }}:  -->
-			<td>{{ item.text }}</td><td>{{ item.last }}</td>
+			<td>{{ item.Name }}</td><td>{{ item.Address }}</td>
 		</tr>
 		{%endfor%}
 	</table>
