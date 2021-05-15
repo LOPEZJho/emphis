@@ -39,10 +39,6 @@ def dataManipulation(request):
 	ename.delete()
 
 	#Update an information for employee
-	#employee = Employee(Name="", Address="", PhoneNumber="", EmailAddress="")
-	#employee.save()
-	#result += 'Updating information <br>'
-
 	employee = Employee.objects.get(name ='')
 	employee.PhoneNumber = ""
 	employee.save = ""
