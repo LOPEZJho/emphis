@@ -20,40 +20,36 @@ def Add_Item(request, eID):
 	return redirect(f'/JMList/{empId.id}/')
 
 def dataManipulation(request):
-	#Creating a new entry for entry
+	#Creating
 	employee = Employee(Name="", Address ="", PhoneNumber="", EmailAddress="")
 	employee.save()
 
-	#Read all of the entries in employee
+	#Read all in employee
 	objects = Employee.objects.all()
 	result ='Printing all of the entries under Employee model : <br>'
 	for x in objects:
 		result += x.Name+"<br>"
 
-	#Read a specific entry in employee
+	#Read specific entry in employee
 	ename = Employee.objects.get(id="")
 	result += 'Printing only one entry <br>'
 	result += ename.PhoneNumber
 
-	#Delete the entry
+	#Delete
 	result += 'Deleting an entry <br>'
 	ename.delete()
 
-	#Update an information for employee
-	#employee = Employee(Name="", Address="", PhoneNumber="", EmailAddress="")
-	#employee.save()
-	#result += 'Updating information <br>'
-
+	#Update
 	employee = Employee.objects.get(name ='')
 	employee.PhoneNumber = ""
 	employee.save = ""
 	res = ""
 
-	#Filtering the data:
+	#Filtering
 	jm = ValidID.objects.filtered(Name = "")
 	result += "Found : %s results <br>" % len (jm)
 
-	#Ordering results
+	#Ordering
 	jm = Employee.objects.ordered_by("Address")
 	for x in jm:
 		result += x.Name + x.Address + '<br>'
