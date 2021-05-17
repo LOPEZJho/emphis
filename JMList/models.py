@@ -41,7 +41,7 @@ class WorkHistory(models.Model):
 		db_table = "workhistory"
 
 class EmployeesStatus(models.Model):
-	PatientId = models.ForeignKey(Employee, default=None, on_delete = models.CASCADE)
+	EmployeeId = models.ForeignKey(Employee, default=None, on_delete = models.CASCADE)
 	ETestDate = models.DateField(default="")
 	EStatus = models.TextField(default="")
 	Comments = models.TextField(default="")
