@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from JMList.models import Item, Employee
+from JMList.models import Employee, ValidID
 
 
 def homepage(request):
