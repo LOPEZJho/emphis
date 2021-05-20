@@ -154,9 +154,9 @@ form .field input[type="submit"]:active{
 	<table id="listTable" name="tr">
 		{% for item in list.item_set.all %} 
        <! -- {{ forloop.counter }}:  -->
-        <td>{{ item.valID }}</td>
-        <td>{{ item.valNum }}</td>
-        <td>{{ item.date }}</td>
+        <td>{{ item.ValID }}</td>
+        <td>{{ item.ValNum }}</td>
+        <td>{{ item.ValDate }}</td>
 		</tr>
 		{%endfor%}
 	</table>
