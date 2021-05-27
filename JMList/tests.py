@@ -3,8 +3,7 @@ from django.test import TestCase
 from JMList.views import homepage
 from django.template.loader import render_to_string
 from django.http import HttpRequest
-from JMList.models import Item, List
-
+from JMList.models import Empoyee, ValidID
 
 class HomePageTest(TestCase):
 
