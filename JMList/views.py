@@ -1,17 +1,16 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from JMList.models import Employee, ValidID
-
+from JMList.models import Item, Employee
 
 def homepage(request):
 	return render(request, 'homepage.html')
 
 def View_List(request, eID):
-	empID = Employee.objects.get(id=eID)
+	empId = Employee.objects.get(id=eId)
 	return render(request, 'idlist.html', {'EmpId':empId})
 
 def New_List(request):
-	newEmp = Employee.objects.create(eName=request.POST['newEmployee'],eGender=request.POST['newGender'],eAddress=request.POST['empAddress'])
+	newEmp = Employee.objects.create(eName=request.POST['newEmployee'],eAddress=request.POST['newAddress'])
 	return redirect(f'/JMList/{newEmp.id}/')
 
 def Add_Item(request, eID):

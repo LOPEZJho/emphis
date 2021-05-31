@@ -3,7 +3,7 @@ from django.test import TestCase
 from JMList.views import homepage
 from django.template.loader import render_to_string
 from django.http import HttpRequest
-from JMList.models import Empoyee, ValidID
+from JMList.models import Item, Employee
 
 class HomePageTest(TestCase):
 
@@ -15,7 +15,7 @@ class HomePageTest(TestCase):
 		self.client.get('/')
 		self.assertEqual(Item.objects.count(),0)
 
-class ListViewTest(TestCase):
+class EmployeeViewTest(TestCase):
 
 	def test_uses_list_template(self):
 		list_ = List.objects.create()
@@ -24,8 +24,8 @@ class ListViewTest(TestCase):
 
 	def test_displays_all_list_items(self):
 		list_ = List.objects.create()
-		Item.objects.create(valID='Jhoanna Marie', list=list_)
-		Item.objects.create(valID='Lopez', list=list_)
+		Item.objects.create(valID='Jhoanna Marie Lopez', list=list_)
+		#Item.objects.create(valID='Lopez', list=list_)
 
 	def test_passes_correct_list_to_template(self):
 		other_list = List.objects.create()
@@ -36,7 +36,7 @@ class ListViewTest(TestCase):
 class NewListTest(TestCase):
 
 	def test_redirects_POST(self):
-		response = self.client.post('/JMList/new', data={'newFirst':'A new newFirst','newLast':'A new newLast','validEntry':'A new validEntry','validNumber':'A new validNumber','validDate':'A new validDate'})
+		response = self.client.post('/JMList/new', data={'newEmployee':'A new newEmployee','newAddress':'A new newAddress','validEntry':'A new validEntry','validNumber':'A new validNumber','validDate':'A new validDate'})
 		new_list = List.objects.first()
 		self.assertRedirects(response, f'/JMList/{new_list.id}/')
 
@@ -46,17 +46,17 @@ class NewItemTest(TestCase):
 		other_list = List.objects.create()
 		correct_list = List.objects.create()
 		
-		self.client.post(f'/JMList/{correct_list.id}/add_item', data={'newFirst': 'A new existing newFirst','newLast': 'A new newLast','validEntry': 'A new validEntry','validNumber': 'A new validNumber','validDate': 'A new validDate'})
+		self.client.post(f'/JMList/{correct_list.id}/add_item', data={'newEmployee': 'A new existing newEmployee','newAddress': 'A new newAddress','validEntry': 'A new validEntry','validNumber': 'A new validNumber','validDate': 'A new validDate'})
 
 		self.assertEqual(Item.objects.count(),1)
 		new_item = Item.objects.first()
-		self.assertEqual(new_item.text, '')
+		self.assertEqual(new_item.name, '')
 		self.assertEqual(new_item.list, correct_list)
 
 	def test_redirects_to_list_view(self):
 		other_list = List.objects.create()
 		correct_list = List.objects.create()
-		response = self.client.post(f'/JMList/{correct_list.id}/add_item', data={'newFirst':'A new newFirst','newLast':'A new newLast','validEntry':'A new validEntry','validNumber':'A new validNumber','validDate':'A new validDate'})
+		response = self.client.post(f'/JMList/{correct_list.id}/add_item', data={'newEmployee':'A new newEmployee','newAddress':'A new newAddress','validEntry':'A new validEntry','validNumber':'A new validNumber','validDate':'A new validDate'})
 		self.assertRedirects(response, f'/JMList/{correct_list.id}/')
 
 
@@ -67,12 +67,12 @@ class ORMTest(TestCase):
 		list_.save()
 
 		first_item = Item()
-		first_item.text = 'The first (ever) list item'
+		first_item.name = 'The first (ever) list item'
 		first_item.list = list_
 		first_item.save()
 
 		second_item = Item()
-		second_item.text = 'Item the second'
+		second_item.name = 'Item the second'
 		second_item.list = list_
 		second_item.save()
 
@@ -85,9 +85,9 @@ class ORMTest(TestCase):
 
 		first_saved_item = saved_items[0]
 		second_saved_item = saved_items[1]
-		self.assertEqual(first_saved_item.text, 'The first (ever) list item')
+		self.assertEqual(first_saved_item.name, 'The first (ever) list item')
 		self.assertEqual(first_saved_item.list, list_)
-		self.assertEqual(second_saved_item.text, 'Item the second')
+		self.assertEqual(second_saved_item.name, 'Item the second')
 		self.assertEqual(second_saved_item.list, list_)
 
 

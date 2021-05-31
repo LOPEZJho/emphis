@@ -5,24 +5,23 @@
     <meta charset="utf-8">
 
     <style>
-    	
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+     body{    
+    font-family: 'Roboto Condensed', sans-serif;
+    
+    
 }
-html,body{
+
+body{
   display: grid;
   height: 100%;
   width: 100%;
   place-items: center;
-
-
   background: grey;
-
 }
+
 ::selection{
   background: #4158d0;
   color: #fff;
@@ -89,9 +88,7 @@ form .field input:valid ~ label{
   background: #fff;
   transform: translateY(-50%);
 }
-
-
-
+     
 form .field input[type="submit"]{
   color: grey;
   border: none;
@@ -114,29 +111,55 @@ form .field input[type="submit"]:active{
 
 <body>
 	<h1 style="color: blue; font-size: 30px">
-	Employees Name
+	Employees Information
 	</h1>
 	<form method="POST" action="/JMList/new">
+    <br>
 		<label>Name of Employee:</label>
 		<input
 		type="text"
 		id="newEmployee"
 		name="newEmployee"
-		size="20"
+		size="25"
 		placeholder="Full name"
 		/>
-		<input
+		<label>Employee's Address:</label>
+    <input
 		type="text"
 		id="newAddress"
 		name="newAddress"
-		size="20"
+		size="25"
 		placeholder="Address"
 		/>
+    <label>Gender:</label>
+    <input
+    type="text"
+    id="newGender"
+    name="newGender"
+    size="10"
+    placeholder="Gender"
+    />
+    <br><br>
+    <label>Contact Information:</label>
+    <input
+    type="text"
+    id="newPhoneNumber"
+    name="newPhoneNumber"
+    size="15"
+    placeholder="Phone Number"
+    />
+    <input
+    type="text"
+    id="newEmailAddress"
+    name="newEmailAddress"
+    size="15"
+    placeholder="Email Address"
+    />
 		<input
 		type="submit"
 		id="btnConfirm"
 		name="btnConfirm"
-		size="20"
+		size="25"
 		style="background-color: lightblue"
 		value="Confirm"
 		/>
@@ -146,7 +169,7 @@ form .field input[type="submit"]:active{
 	<table id="listTable" name="tr">
 		<tr>
 		<! -- {{ forloop.counter }}:  -->
-			<td>{{ item.Name }}</td><td>{{ item.Address }}</td>
+			<td>{{ item.Name }} lives in {{ item.Address }}</td>
 		</tr>
 		{%endfor%}
 	</table>
