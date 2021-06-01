@@ -1,61 +1,10 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from JMList.models import Item, Employee
+from JMList.models import Item, List
 
-def homepage(request):
-	return render(request, 'homepage.html')
+#list 1st model
+#items 2nd model
 
-def View_List(request, eID):
-	empId = Employee.objects.get(id=eId)
-	return render(request, 'idlist.html', {'EmpId':empId})
-
-def New_List(request):
-	newEmp = Employee.objects.create(eName=request.POST['newEmployee'],eAddress=request.POST['newAddress'])
-	return redirect(f'/JMList/{newEmp.id}/')
-
-def Add_Item(request, eID):
-	empID = Employee.objects.get(id=eID)
-	Item.objects.create(EmpId=empId, ValID=request.POST['validEntry'],ValNum=request.POST['validNumber'],ValDate=request.POST['validDate'])
-	return redirect(f'/JMList/{empId.id}/')
-
-def dataManipulation(request):
-	#Creating
-	employee = Employee(Name="", Address ="", PhoneNumber="", EmailAddress="")
-	employee.save()
-
-	#Read all in employee
-	objects = Employee.objects.all()
-	result ='Printing all of the entries under Employee model : <br>'
-	for x in objects:
-		result += x.Name+"<br>"
-
-	#Read specific entry in employee
-	ename = Employee.objects.get(id="")
-	result += 'Printing only one entry <br>'
-	result += ename.PhoneNumber
-
-	#Delete
-	result += 'Deleting an entry <br>'
-	ename.delete()
-
-	#Update
-	employee = Employee.objects.get(name ='')
-	employee.PhoneNumber = ""
-	employee.save = ""
-	res = ""
-
-	#Filtering
-	jm = ValidID.objects.filtered(Name = "")
-	result += "Found : %s results <br>" % len (jm)
-
-	#Ordering
-	jm = Employee.objects.ordered_by("Address")
-	for x in jm:
-		result += x.Name + x.Address + '<br>'
-
-
-
-'''
 def homepage(request):
 	items = Item.objects.all()
 	return render(request, 'homepage.html',{'items' : items})
@@ -72,7 +21,47 @@ def new_list(request):
 def add_item(request, list_id):
 	list_ = List.objects.get(id=list_id)
 	Item.objects.create(valID=request.POST['validEntry'],valNum=request.POST['validNumber'],date=request.POST['validDate'],list=list_)
-	return redirect(f'/JMList/{list_.id}/')'''
+	return redirect(f'/JMList/{list_.id}/')
+
+'''
+def dataManipulation(request):
+	#Creating
+	employee = Employee(Name="Jhoanna Marie Lopez", Address ="B5 L14 Bonifacio St., Windsor Homes Subd., Brgy. Burol III, Dasmarinas City, Cavite", PhoneNumber="09478766415", EmailAddress="jhoannamarie.lopez@gsfe.tupcavite.edu,ph")
+	employee.save()
+
+	#Read all in employee
+	employee = Employee.objects.all()
+	result ='Printing all of the entries under Employee model : <br>'
+	for x in objects:
+		result += x.Name+"<br>"
+
+	#Read specific entry in employee
+	employeename = Employee.objects.get(id="employee")
+	res += 'Printing only one entry <br>'
+	res += employeename.Name
+
+	#Delete
+	res += 'Deleting an entry <br>'
+	employeename.delete()
+
+	#Update
+	employee = Employee.objects.get(name ='Jhoanna Marie Lopez')
+	employee.PhoneNumber = "09614423655"
+	employee.save = ""
+	res = ""
+
+	#Filtering
+	qs = Employee.objects.filtered(Name = "Jhoanna Marie Lopez")
+	res += "Found : %s results <br>" % len (qs)
+
+	#Ordering
+	qs = Employee.objects.ordered_by("Address")
+	for x in qs:
+		result += x.Name + x.Address + '<br>'
+'''
+
+
+
 
 
 '''	
