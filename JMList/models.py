@@ -7,7 +7,7 @@ class Employee(models.Model):
 	PhoneNumber = models.CharField(default="", max_length=12)
 	EmailAddress = models.TextField(default="")
 	class meta:
-		db_table = "employees"
+		db_table = "employee"
 
 class ValidID(models.Model):
 	EmpID = models.ForeignKey(Employee, default=None, on_delete = models.CASCADE)

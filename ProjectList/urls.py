@@ -7,7 +7,7 @@ urlpatterns = [
     url(r'^$', views.homepage, name='homepage'),
     url(r'^JMList/new$', views.new_list, name='view_list'),
     url(r'^JMList/(\d+)/$', views.view_list, name='view_item'),
-    url(r'^JMList/(\d+)/add_item$', views.add_item, name='add_item'),]
+    url(r'^JMList/(\d+)/add_item$', views.add_item, name='add_tem'),]
 
 
 '''

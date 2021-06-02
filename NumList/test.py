@@ -1,11 +1,10 @@
 from selenium import webdriver
-import unittest
 from selenium.webdriver.common.keys import Keys
 import time
 from django.test import LiveServerTestCase
 from selenium.common.exceptions import WebDriverException
 
-
+MAX_WAIT = 3
 class PageTest(LiveServerTestCase):
 
 	def setUp(self):
@@ -29,28 +28,46 @@ class PageTest(LiveServerTestCase):
 		#self.browser.get('http://localhost:8000/')
 		self.assertIn('Employees History',self.browser.title)
 		header_Text = self.browser.find_element_by_tag_name('h1').text
-		self.assertIn('Employees Name', header_Text)
+		self.assertIn('Employees History', header_Text)
 		
-		inputtext = self.browser.find_element_by_id('newFirst')
-		self.assertEqual(inputtext.get_attribute('placeholder'), 'First name')
-		inputtext.click()
-		inputtext.send_keys('Jhoanna Marie')
+		inputName = self.browser.find_element_by_id('newEmployee')
+		self.assertEqual(inputName.get_attribute('placeholder'), 'Full name')
+		inputName.click()
+		inputName.send_keys('Jhoanna Marie Lopez')
 		time.sleep(1)
 
-		inputlast = self.browser.find_element_by_id('newLast')
-		self.assertEqual(inputlast.get_attribute('placeholder'), 'Last name')
-		inputlast.click()
-		inputlast.send_keys('Lopez')
+		inputAddress = self.browser.find_element_by_id('newAddress')
+		self.assertEqual(inputAddress.get_attribute('placeholder'), 'Address')
+		inputAddress.click()
+		inputAddress.send_keys('Windsor Homes Subd., Brgy. Burol III, Dasmarinas City, Cavite')
 		time.sleep(1)
 
-		btnConfirm = self.browser.find_element_by_id('btnConfirm')
-		btnConfirm.click()
+		inputGender = self.browser.find_element_by_id('newGender')
+		self.assertEqual(inputGender.get_attribute('placeholder'), 'Gender')
+		inputGender.click()
+		inputGender.send_keys('Female')
+		time.sleep(1)
+
+		inputPhoneNumber = self.browser.find_element_by_id('newPhoneNumber')
+		self.assertEqual(inputPhoneNumber.get_attribute('placeholder'), 'Phone Number')
+		inputPhoneNumber.click()
+		inputPhoneNumber.send_keys('09478766415')
+		time.sleep(1)
+
+		inputEmailAddress = self.browser.find_element_by_id('newEmailAddress')
+		self.assertEqual(inputEmailAddress.get_attribute('placeholder'), 'Email Address')
+		inputEmailAddress.click()
+		inputEmailAddress.send_keys('jhoannamarie.lopez@gsfe.tupcavite.edu.ph')
+		time.sleep(1)
+
+		btnProceed = self.browser.find_element_by_id('btnProceed')
+		btnProceed.click()
 		time.sleep(2)
 
-		inputvalidID = self.browser.find_element_by_id('validEntry')
-		self.assertEqual(inputvalidID.get_attribute('placeholder'), 'Name of ID')
-		inputvalidID.click()
-		inputvalidID.send_keys('TIN ID')
+		inputValID = self.browser.find_element_by_id('validEntry')
+		self.assertEqual(inputValID.get_attribute('placeholder'), 'Name of ID')
+		inputValID.click()
+		inputValID.send_keys('TIN ID')
 		time.sleep(1)
 
 		inputvalidnum = self.browser.find_element_by_id('validNumber')
