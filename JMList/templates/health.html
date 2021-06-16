@@ -4,14 +4,12 @@
 <title>Employees History</title>
     <meta charset="utf-8">
 
-
-<style>
-
+    <style>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
 
-body{    
-font-family: 'Roboto Condensed', sans-serif;}
+     body{    
+    font-family: 'Roboto Condensed', sans-serif;}
 
 body{
   display: grid;
@@ -92,7 +90,7 @@ form .field input[type="submit"]{
   border: none;
   padding-left: 0;
   margin-top: -10px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   background: blue;
@@ -102,9 +100,15 @@ form .field input[type="submit"]:active{
   transform: scale(0.95);
 }
 
+
 .navbar {
   overflow: hidden;
   background-color: black;
+}
+
+.navbar a:hover, .dropdown:hover
+.dropbtn {
+  background-color: lightblue;
 }
 
 .navbar a{
@@ -114,11 +118,6 @@ form .field input[type="submit"]:active{
   text-align: center;
   padding: 25px 32px;
   text-decoration: none;
-}
-
-.navbar a:hover, .dropdown:hover
-.dropbtn {
-  background-color: lightblue;
 }
     </style> 
 
@@ -138,61 +137,61 @@ form .field input[type="submit"]:active{
 </div>
 </div>
 
-  <h1 style="color: blue; font-size: 25px">
-  Employees Information
-</h1>
-  <form method="POST" action="/JMList/new">
-    <br>
-    <label>Name of Employee:</label>
+
+<h1 style="color: blue; font-size: 20px">Employees History</h1>
+  <form method="POST">
+<h2 style="color: blue; font-size: 20px">Employees Health</h2>
+    <label>Health Issue/s:</label>
     <input
     type="text"
-    id="newEmployee"
-    name="newEmployee"
-    size="15"
-    placeholder="Surname, First name, M.I"
+    id="ehealth"
+    name="ehealth"
+    size="20"
+    placeholder="Health Issue/s"
     />
-    <label>Employee's Address:</label>
+    <label>Maintenance:</label>
     <input
     type="text"
-    id="newAddress"
-    name="newAddress"
-    size="55"
-    placeholder="Address"
+    id="emaintenance"    
+    name="emaintenance"
+    size="20"
+    placeholder="Maintenance"
     />
     <br><br>
-    <label>Gender:</label>
+    <br><br>
+
+  <h2 style="color: blue; font-size: 20px">Work History</h2>
+  <form method="POST">
+    <label>Company:</label>
     <input
     type="text"
-    id="newGender"
-    name="newGender"
-    size="2"
-    placeholder="Gender"
-    />
-    <label>Phone Number:</label>
-    <input
-    type="text"
-    id="newPhoneNumber"
-    name="newPhoneNumber"
+    id="workhis"
+    name="workhis"
     size="15"
-    placeholder="09123456789"
-    />
-    <label>E-mail Address:</label>
+    placeholder="Company you work before">
+    <label>Location:</label>
     <input
     type="text"
-    id="newEmailAddress"
-    name="newEmailAddress"
-    size="30"
-    placeholder="juandelacruz@gmail.com"
-    />
+    id="workloc"
+    name="workloc"
+    size="15"
+    placeholder="Company address">
+    <label>Company Number:</label>
+    <input
+    type="text"
+    id="worknum"
+    name="worknum"
+    size="15"
+    placeholder="Company Number">
     <input
     type="submit"
-    id="btnProceed"
-    name="btnProceed"
+    id="btnConfirm"
+    name="btnConfirm"
     size="25"
-    style="background-color: lightblue"
-    value="Proceed"
+    style="background-color: lightblue;"
+    value="Confirm"
     />
-    {% csrf_token %}
+    <br>
   </form>
 </body>
 </html>

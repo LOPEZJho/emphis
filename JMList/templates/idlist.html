@@ -4,22 +4,19 @@
 <title>Employees History</title>
     <meta charset="utf-8">
 
-
     <style>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
      body{    
-    font-family: 'Roboto Condensed', sans-serif;
-    
-    
-}
+    font-family: 'Roboto Condensed', sans-serif;}
 
 body{
   display: grid;
   height: 100%;
   width: 100%;
   place-items: center;
-  background: lightgrey;
+  background-color: lightgrey;
 }
 
 ::selection{
@@ -33,7 +30,7 @@ body{
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
 }
 .wrapper .title{
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 600;
   text-align: center;
   line-height: 100px;
@@ -55,8 +52,7 @@ body{
   height: 100%;
   width: 100%;
   outline: none;
-  font-size: 17px;
-  padding-left: 20px;
+  font-size: 15px;
   border: 1px solid lightgrey;
   border-radius: 25px;
   transition: all 0.3s ease;
@@ -75,7 +71,7 @@ form .field input:valid{
   left: 20px;
   color: #999999;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 15px;
   pointer-events: none;
   transform: translateY(-50%);
   transition: all 0.3s ease;
@@ -83,7 +79,7 @@ form .field input:valid{
 form .field input:focus ~ label,
 form .field input:valid ~ label{
   top: 0%;
-  font-size: 16px;
+  font-size: 15px;
   color: #4158d0;
   background: #fff;
   transform: translateY(-50%);
@@ -105,38 +101,92 @@ form .field input[type="submit"]:active{
 }
 
 
+.navbar {
+  overflow: hidden;
+  background-color: black;
+}
+
+.navbar a:hover, .dropdown:hover
+.dropbtn {
+  background-color: lightblue;
+}
+
+.navbar a{
+  float: left;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  padding: 25px 32px;
+  text-decoration: none;
+}
     </style> 
+
 </head>
 
 <body>
-	<h1 style="color: darkviolet; font-size: 30px">
-	Employees Work History
-	</h1>
-	<form method="POST" action="/JMList/{{ employee_.id }}/add_validid">
-		<label>Valid ID of Employee:</label>
-		<input
-		type="text"
-		id="validEntry"
-		name="validEntry"
-		size="15"
-		placeholder="Name of ID"
-		/>
-		<label>ID Number:</label>
-		<input
-		type="text"
-		id="validNumber"		
-		name="validNumber"
-		size="15"
-		placeholder="ID Number"
-		/>
-		<input
-		type="submit"
-		id="btnConfirm"
-		name="btnConfirm"
-		size="25"
-		style="background-color: violet"
-		value="Confirm"
-		/>
-	</form>
+
+
+<div class="navbar">
+  <a href="homepage.html">Home</a>
+  <a href="idlist.html">Work Information</a>
+  <a href="health.html">Employees History</a>
+  <a href="valid.html">Valid ID & Health Issue</a>
+  <a href="dept.html">Department & Work History</a>
+  <a href="about.html">About</a> 
+  <a href="contact.html">Contacts</a>
+</div>
+</div>
+
+
+<h1 style="color: blue; font-size: 20px">Employees Work Information</h1>
+  <form method="POST" action="/JMList/{{ employee_.id }}/add_validid">
+    <h2 style="color: blue; font-size: 20px">Valid ID</h2>
+    <label>Valid ID of Employee:</label>
+    <input
+    type="text"
+    id="validEntry"
+    name="validEntry"
+    size="15"
+    placeholder="Name of ID"
+    />
+    <label>ID Number:</label>
+    <input
+    type="text"
+    id="validNumber"    
+    name="validNumber"
+    size="18"
+    placeholder="ID Number"
+    />
+    <br><br>
+    <br><br>
+
+  <h2 style="color: blue; font-size: 20px">Department</h2>
+  <form method="POST">
+    <label>Department Name:</label>
+    <input
+    type="text"
+    id="deptname"
+    name="deptname"
+    size="20"
+    placeholder="Name of Department"
+    />
+    <label>Department Head:</label>
+    <input
+    type="text"
+    id="depthead"    
+    name="depthead"
+    size="20"
+    placeholder="Name of Department Head"
+    />
+    <input
+    type="submit"
+    id="btnConfirm"
+    name="btnConfirm"
+    size="25"
+    style="background-color: lightblue;"
+    value="Confirm"
+    />
+    <br>
+  </form>
 </body>
 </html>
