@@ -129,8 +129,6 @@ form .field input[type="submit"]:active{
 
 <div class="navbar">
   <a href="/homepage">Home</a>
-  <a href="/idlist">Work Information</a>
-  <a href="/healthandhistory">Employees History</a>
   <a href="/idlistandhealth">Valid ID & Health Issue</a>
   <a href="/employment">Department & Work History</a>
   <a href="/about">About</a> 
@@ -140,7 +138,7 @@ form .field input[type="submit"]:active{
   <h1 style="color: blue; font-size: 25px">
   Employees Information
 </h1>
-  <form method="POST" action="/JMList/new">
+  <form method="POST" action="/new_validid">
     <br>
     <label>Name of Employee:</label>
     <input
@@ -193,5 +191,30 @@ form .field input[type="submit"]:active{
     />
     {% csrf_token %}
   </form>
+
+  <table id="listTable" name="tr">
+
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Gender</th>
+      <th>Phone Number</th>
+      <th>Email Address</th>
+
+    </tr>
+
+
+{%for employee in employees%}
+
+    <tr>
+    <! -- {{ forloop.counter }}:  -->
+      <td>{{ employee.name }}</td> 
+      <td>{{ employee.address }}</td>
+      <td>{{ employee.gender }}</td>
+      <td>{{ employee.phonenumber }}</td>
+      <td>{{ employee.emailaddress }}</td>
+    </tr>
+    {%endfor%}
+  </table>
 </body>
 </html>

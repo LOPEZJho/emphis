@@ -127,8 +127,6 @@ form .field input[type="submit"]:active{
 
 <div class="navbar">
   <a href="/homepage">Home</a>
-  <a href="/idlist">Work Information</a>
-  <a href="/healthandhistory">Employees History</a>
   <a href="/idlistandhealth">Valid ID & Health Issue</a>
   <a href="/employment">Department & Work History</a>
   <a href="/about">About</a> 
@@ -137,7 +135,7 @@ form .field input[type="submit"]:active{
 
 
 <h1 style="color: blue; font-size: 20px">Employees Work Information</h1>
-  <form method="POST" action="/JMList/{{ employee_.id }}/add_validid">
+  <form method="POST" action="/{{employee.id}}/addemp_id">
     <h2 style="color: blue; font-size: 20px">Valid ID</h2>
     <label>Valid ID of Employee:</label>
     <input
@@ -155,27 +153,6 @@ form .field input[type="submit"]:active{
     size="18"
     placeholder="ID Number"
     />
-    <br><br>
-    <br><br>
-
-  <h2 style="color: blue; font-size: 20px">Department</h2>
-  <form method="POST">
-    <label>Department Name:</label>
-    <input
-    type="text"
-    id="deptname"
-    name="deptname"
-    size="20"
-    placeholder="Name of Department"
-    />
-    <label>Department Head:</label>
-    <input
-    type="text"
-    id="depthead"    
-    name="depthead"
-    size="20"
-    placeholder="Name of Department Head"
-    />
     <input
     type="submit"
     id="btnConfirm"
@@ -185,6 +162,7 @@ form .field input[type="submit"]:active{
     value="Confirm"
     />
     <br>
+     {% csrf_token %}
   </form>
 </body>
 </html>

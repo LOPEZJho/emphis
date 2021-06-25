@@ -6,13 +6,27 @@ from JMList.models import Employee, ValidID, Department, EmployeesHealth, WorkHi
 #items 2nd model
 
 def homepage(request):
-	#employees = Employee.objects.all()
-	return render(request, 'homepage.html')
+   employees = Employee.objects.all()
+   return render(request, 'homepage.html',{'employees': employees})
 
-def home_page(request):
-	#employees = Employee.objects.all()
-	return render(request, 'homepage.html')
+def new_validid(request):   #new_ibrgy
+   newemployee_ = Employee.objects.create(name=request.POST['newEmployee'],gender=request.POST['newGender'],address=request.POST['newAddress'],phonenumber=request.POST['newPhoneNumber'],emailaddress=request.POST['newEmailAddress'])
+   return redirect(f'/{newemployee_.id}/view_validid')
+    
+def addemp_id(request, employee_id): #add_info
+   employee_ = Employee.objects.get(id=employee_id)    
+   ValidID.objects.create(valid=request.POST['validEntry'],valnum=request.POST['validNumber'], employee=employee_)
+   return redirect(f'/{employee_.id}/view_validid') 
+   #return render(request, 'idlist.html')
+   
+def view_validid(request, employee_id): #view_ibrgy    
+   employee_ = Employee.objects.get(id=employee_id)
+   return render(request, 'idlist.html', {'employee': employee_})
+   
+ 
 
+
+'''
 def emp_id(request):
 	#employee_ = Employee.objects.get(id=employee_id)
 	return render(request, 'idlist.html')
@@ -35,7 +49,6 @@ def view_contact(request):
 def view_about(request):
 	return render(request, 'about.html')
 
-'''
 def new_list(request):
 	#employee_ = Employee.objects.create(Name=request.POST['newEmployee'], Address=request.POST['newAddress'],employees=EmpID_)
 	return redirect(f'/JMList/{employee_.id}/')
