@@ -9,39 +9,48 @@ def homepage(request):
    employees = Employee.objects.all()
    return render(request, 'homepage.html',{'employees': employees})
 
-def new_validid(request):   #new_ibrgy
+def new_validid(request):   
    newemployee_ = Employee.objects.create(name=request.POST['newEmployee'],gender=request.POST['newGender'],address=request.POST['newAddress'],phonenumber=request.POST['newPhoneNumber'],emailaddress=request.POST['newEmailAddress'])
    return redirect(f'/{newemployee_.id}/view_validid')
     
-def addemp_id(request, employee_id): #add_info
+def addemp_id(request, employee_id): 
    employee_ = Employee.objects.get(id=employee_id)    
    ValidID.objects.create(valid=request.POST['validEntry'],valnum=request.POST['validNumber'], employee=employee_)
    return redirect(f'/{employee_.id}/view_validid') 
    #return render(request, 'idlist.html')
    
-def view_validid(request, employee_id): #view_ibrgy    
+def view_validid(request, employee_id):     
    employee_ = Employee.objects.get(id=employee_id)
    return render(request, 'idlist.html', {'employee': employee_})
    
- 
+def view_contact(request):
+	return render(request, 'contact.html')
+
+def view_about(request):
+	return render(request, 'about.html')
+
+def edit(request, id):
+	employees = Employee.objects.get(id=id)
+	content = {'employees' : employees}
+	return render(request, 'templates.html', content)
+
+def update(request, id):
+	employee = Employee.objects.get(id=id)
+	employee.name = request.POST['newEmployee']
+	employee.gender = request.POST['newGender']
+	employee.address = request.POST['newAddress']
+	employee.phonenumber = request.POST['newPhoneNumber']
+	employee.emailaddress = request.POST['newEmailAddress']
+	employee.save()
+	return redirect('/')
+
+def delete(request, id):
+	employee = Employee.objects.get(id=id)
+	employee.delete()
+	return redirect('/')
 
 
 '''
-def emp_id(request):
-	#employee_ = Employee.objects.get(id=employee_id)
-	return render(request, 'idlist.html')
-
-def health_history(request):
-	#employee_ = Employee.objects.get(id=employee_id)
-	return render(request, 'health.html')
-
-def id_health(request):
-	#employee_ = Employee.objects.get(id=employee_id)
-	return render(request, 'valid.html')
-
-def dept_history(request):
-	#employee_ = Employee.objects.get(id=employee_id)
-	return render(request, 'dept.html')
 
 def view_contact(request):
 	return render(request, 'contact.html')

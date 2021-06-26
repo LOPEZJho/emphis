@@ -4,7 +4,6 @@
 <title>Employees History</title>
     <meta charset="utf-8">
 
-
 <style>
 
 
@@ -54,7 +53,7 @@ body{
   height: 100%;
   width: 100%;
   outline: none;
-  font-size: 15px;
+  font-size: 25px;
   border: 1px solid lightgrey;
   border-radius: 25px;
   transition: all 0.3s ease;
@@ -92,7 +91,7 @@ form .field input[type="submit"]{
   border: none;
   padding-left: 0;
   margin-top: -10px;
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 500;
   cursor: pointer;
   background: blue;
@@ -107,19 +106,43 @@ form .field input[type="submit"]:active{
   background-color: black;
 }
 
+.navbar a{
+  float: left;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  padding: 25px 35px;
+  text-decoration: none;
+}
+
 .navbar a:hover, .dropdown:hover
 .dropbtn {
   background-color: lightblue;
 }
 
-.navbar a{
-  float: left;
-  font-size: 15px;
-  color: white;
-  text-align: center;
-  padding: 25px 32px;
-  text-decoration: none;
+#listTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
+
+#listTable td, #listTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#listTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#listTable tr:hover {background-color: #ddd;}
+
+#listTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
     </style> 
 
 </head>
@@ -128,24 +151,27 @@ form .field input[type="submit"]:active{
 
 
 <div class="navbar">
-  <a href="/homepage">Home</a>
-  <a href="/idlistandhealth">Valid ID & Health Issue</a>
-  <a href="/employment">Department & Work History</a>
+  <a href="/">Home</a>
+  <a href="/idlist">Valid ID</a>
+  <a href="/employment">Department</a>
+  <a href="/ehealth">Health</a>
+  <a href="/ehistory">Work History</a>
   <a href="/about">About</a> 
   <a href="/contacts">Contacts</a>
 </div>
 
 
-<h1 style="color: blue; font-size: 20px">Employment History</h1>
-  <form method="POST">
-<h2 style="color: blue; font-size: 20px">Department</h2>
-    <label>Department Name:</label>
+<h1 style="color: blue; font-size: 20px">Employees Department</h1>
+  <form method="POST" action="/{{employee.id}}/addemp_id">
+    <h2 style="color: blue; font-size: 20px">Department</h2>
+    <label>Name of Department:</label>
     <input
     type="text"
     id="deptname"
     name="deptname"
     size="15"
     placeholder="Name of Department"
+    required="required"
     />
     <label>Department Head:</label>
     <input
@@ -153,33 +179,9 @@ form .field input[type="submit"]:active{
     id="depthead"    
     name="depthead"
     size="18"
-    placeholder="Name of Department Head"
+    placeholder="Department Head"
+    required="required"
     />
-    <br><br>
-    <br><br>
-
-  <h2 style="color: blue; font-size: 20px">Work History</h2>
-    <label>Company:</label>
-    <input
-    type="text"
-    id="workhis"
-    name="workhis"
-    size="15"
-    placeholder="Company you work before">
-    <label>Location:</label>
-    <input
-    type="text"
-    id="workloc"
-    name="workloc"
-    size="15"
-    placeholder="Company address">
-    <label>Company Number:</label>
-    <input
-    type="text"
-    id="worknum"
-    name="worknum"
-    size="15"
-    placeholder="Company Number">
     <input
     type="submit"
     id="btnConfirm"
@@ -189,6 +191,7 @@ form .field input[type="submit"]:active{
     value="Confirm"
     />
     <br>
+     {% csrf_token %}
   </form>
 </body>
 </html>
